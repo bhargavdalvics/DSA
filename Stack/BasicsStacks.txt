@@ -1,0 +1,106 @@
+push
+pop
+peek(knowing a value at particular index)
+StackTop
+isFull
+isEmpty
+
+STACK USING ARRAY
+
+will need 
+1.size
+2.Top 
+3.pointer (int *stack)
+
+
+    //if (top==-1)      stack is isEmpty 
+    //if (top==size-1)  stack is isFull
+
+    //peek
+    how to solve?
+    index=top-position+1     //will actually give you index value (TRY!) 
+
+    
+
+
+
+
+
+
+//main body
+int main(){
+    struct stack st;             // st is stack
+    pf("enter the size of that stack);
+    scf("%d",&st.size);
+    st.s=new[st.size]//malloc
+    st.stack=-1;     //we will assume top value as -1
+
+
+    void push(stack *st , int x){
+        if(st->top==st->size-1)
+            pf("stack overflow);
+        else{
+            st->top++;
+            st->s[st->top] = x;
+
+        }
+
+
+    void pop(stack *st){
+        int x=-1;          //means default value is -1 stack is empty 
+        if(st->top==-1)
+            pf("stack underflow)
+        else{
+            st->s[st->top];
+            st->top--;
+     }
+     return x;
+
+    }
+    int peek(struct *st,int pos){            //can also use &st to modify
+        int x=-1;
+        if(st.top-position+1<0)
+            pf("invalid postion");
+        
+        else{
+            x=st.s[st.top-position+1];
+             
+
+        }
+        return x;
+
+            
+        
+    }
+
+        }
+    //StackTop
+    int StackTop(struct st){
+        if(st.top==-1)
+            return -1;
+        else
+        return st.s[st.top];
+    }
+    //isEmpty
+    int isEmpty(struct st){
+        if(st.top==-1)
+            return -1;
+        else
+            return 0;
+    }
+    //isFull
+    int isFull(struct st){
+        if(st.top==st.size-1)
+            return 1;
+        else
+            return 0;
+    }
+
+
+
+
+}
+
+
+
+
